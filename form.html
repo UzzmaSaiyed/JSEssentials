@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <form id="registration-form">
+        <h2>Registration Form</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Username"><br>
+        <label for="pass">Password:</label>
+        <input type="password" id="password" placeholder="Password"><br>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm Password"><br>
+        <button type="submit" onclick="register()">Register</button>
+    </form>
+
+    <script>
+
+        const registrationForm = document.getElementById('registration-form');
+
+        function register() {
+            event.preventDefault(); //prevent from getting erased when alert box appears
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (username === '') {
+                alert('Please enter a username.');
+            } else if (password === '') {
+                alert('Please enter a password.');
+            } else if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+            } else {
+                alert('Registration successful!');
+            }
+        }
+
+        //Another way for Event Listener
+
+        // registrationForm.addEventListener('submit', function (event) {
+        //     event.preventDefault();
+
+        //     const username = document.getElementById('username').value;
+        //     const password = document.getElementById('password').value;
+        //     const confirmPassword = document.getElementById('confirm-password').value;
+
+        //     if (username === '') {
+        //         alert('Please enter a username.');
+        //     } else if (password === '') {
+        //         alert('Please enter a password.');
+        //     } else if (password !== confirmPassword) {
+        //         alert('Passwords do not match.');
+        //     } else {
+        //         alert('Registration successful!');
+        //     }
+
+
+        // });
+
+
+
+    </script>
+
+</body>
+
+</html>

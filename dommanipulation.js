@@ -24,3 +24,8 @@ function rotateImage() {
     a.style.transform = "rotateZ(28000deg)";
 }
 
+//Adding event listener via js instead of onclick 
+document.getElementById("third").addEventListener('click', () => {
+    alert('Header clicked!');
+});
+
