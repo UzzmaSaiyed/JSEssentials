@@ -1,0 +1,29 @@
+.first {
+    background-color: black;
+    color: antiquewhite;
+}
+
+.second {
+    background-color: aquamarine;
+    height: 400px;
+    width: 400px;
+    transition: 3s;
+}
+
+p {
+    background-color: chocolate;
+}
+
+.third {
+    border-radius: 50%;
+    margin: 100px 0px 0px 0px;
+    height: fit-content;
+    width: fit-content;
+    transition: 5s;
+}
+
+.circularimage {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
