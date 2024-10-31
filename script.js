@@ -21,8 +21,11 @@ console.log(n3 === n4); // false (strict comparison, str is not coerced to a num
 // Conditional statements
 
 //Taking user input
-// const prompt = require('prompt-sync')();
+
 //Only use when using prompt in node.js
+//npm init
+// npm install prompt-sync
+// const prompt = require('prompt-sync')();
 
 let score = prompt("Enter Score from 0 to 100");
 
