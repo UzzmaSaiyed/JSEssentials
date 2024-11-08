@@ -246,9 +246,23 @@ let product = [
     }
 ];
 
+let flag = true;
 function displayProducts() {
-    const output = document.getElementById('output');
-    output.textContent = JSON.stringify(product, null, 2);
+    if (flag === true) {
+        let output = document.getElementById('output');
+        output.textContent = JSON.stringify(product, null, 2);
+        let b = document.getElementById('disp');
+        b.textContent = 'Hide Products';
+        flag = false;
+    } else {
+        let output = document.getElementById('output');
+        output.textContent = '';
+        let b = document.getElementById('disp');
+        b.textContent = 'Display Products';
+        flag = true;
+
+    }
+
 }
 
 
