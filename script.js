@@ -193,6 +193,8 @@ class Car {
 let myCar = new Car("Toyota");
 myCar.start();
 
+// Array of object
+
 let product = [
     {
         "name": "Laptop",
@@ -264,6 +266,18 @@ function displayProducts() {
     }
 
 }
+
+
+//Callback function
+
+function addProduct(name) {
+    console.log("This is an example of a simple callback function");
+    name();
+}
+
+addProduct(function () {
+    console.log("Callback function called");
+})
 
 
 
