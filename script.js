@@ -270,14 +270,29 @@ function displayProducts() {
 
 //Callback function
 
-function addProduct(name) {
-    console.log("This is an example of a simple callback function");
-    name();
+function addProduct(name, a, b) {
+    console.log("This is an example of a simple callback function with parameters", a + b);
+    name(23);
 }
 
-addProduct(function () {
-    console.log("Callback function called");
-})
+addProduct(function (c) {
+    console.log("Callback function called", c);
+}, 5, 6)
+
+//callback function with arrow function
+
+delProducts = (name, a, b) => {
+    console.log("This is an example of a callback arrow function", b - a);
+    name(28);
+}
+
+delProducts((d) => {
+    console.log("Callback arrow function called", d);
+}, 5, 10)
+
+
+
+
 
 
 
