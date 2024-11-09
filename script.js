@@ -174,9 +174,11 @@ sub(3);
 
 let mul = () => { console.log(6 * 5); }
 let div = () => console.log(6 / 5); //Single line code can be written without parentheses
+let demoArrow = () => 89; //No need to write return also
 
 mul();
 div();
+console.log(demoArrow());
 
 //Class
 
@@ -289,9 +291,6 @@ delProducts = (name, a, b) => {
 delProducts((d) => {
     console.log("Callback arrow function called", d);
 }, 5, 10)
-
-
-
 
 
 
