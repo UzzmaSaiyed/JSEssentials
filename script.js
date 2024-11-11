@@ -292,13 +292,59 @@ delProducts((d) => {
     console.log("Callback arrow function called", d);
 }, 5, 10)
 
+//For each loop
 
+let numbers = [1, 2, 3, 4, 5];
+let sum = 0;
+numbers.forEach((element, index, array) => {
+    // we can pass any parameter mentioned above
+    console.log(element, index, array);
+    sum += element;
+});
 
+console.log("Sum of numbers: ", sum);
 
+//Map
+//Map always return something
 
+let mapArray = numbers.map((element) => {
+    return element * 2;
+});
 
+console.log("Map Array: ", mapArray);
 
+let flowerArray = [
+    {
+        name: "a", color: "Red", smell: "sweet", existsIn: "Antarctica"
+    },
+    {
+        name: "b", color: "Yellow", smell: "sour", existsIn: "Bermuda"
+    },
+    {
+        name: "c", color: "Green", smell: "sweet", existsIn: "New Zealand"
+    },
+    {
+        name: "d", color: "Blue", smell: "sweet", existsIn: "Australia"
+    },
+    {
+        name: "e", color: "Purple", smell: "sweet", existsIn: "Antarctica"
+    }
+]
 
+let mapFlowers = flowerArray.map((element) => {
+    return element.name;
+});
+
+console.log("Flower names are", mapFlowers)
+
+//Filter
+
+let filterArray = flowerArray.filter((element) => {
+    return element.color === "Red";
+    // return element whose above condition is true
+});
+
+console.log("Filter Array: ", filterArray);
 
 
 
