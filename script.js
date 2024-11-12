@@ -341,11 +341,19 @@ console.log("Flower names are", mapFlowers)
 
 let filterArray = flowerArray.filter((element) => {
     return element.color === "Red";
-    // return element whose above condition is true
+    // return all elements whose above condition is true
 });
 
 console.log("Filter Array: ", filterArray);
 
+//Find
+
+let findFlower = flowerArray.find((element) => {
+    return element.smell === "sweet";
+    // return only 1st element whose above condition is true
+});
+
+console.log("Found Flower", findFlower);
 
 
 
