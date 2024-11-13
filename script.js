@@ -355,6 +355,50 @@ let findFlower = flowerArray.find((element) => {
 
 console.log("Found Flower", findFlower);
 
+//destructuring
+
+// let obj = { name: "John", age: 30 };
+// let name = obj.name
+// let age = obj.age
+
+let obj2 = { name: "John", age: 30 };
+let { name, age } = obj2;
+console.log("Name", name);
+
+//Spread Operator, Array destructuring
+
+let n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log("Array:", n);
+console.log("Spread Operator", ...n);
+
+//simple copying, no new array created and both variables point to same memeory
+let newArray = n;
+
+//copying the array and creating new array
+let arr = [...n];
+
+n[0] = 10;
+
+console.log("New Array:", newArray);
+console.log("Array after spread operator", arr);
+
+//joining the array
+let arr2 = [...n, ...arr];
+console.log("Array after merging", arr2);
+
+//rest parameter
+function doDisplay(b, ...a) {
+    console.log(b, a);
+}
+doDisplay(21, 212, 33, 42, 53);
+
+
+
+
+
+
+
+
 
 
 
