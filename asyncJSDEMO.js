@@ -35,7 +35,11 @@ function getData(cb) {
 function getHobby(users, cb) {
     let hobby = [{ hobby: "Reading" }, { hobby: "Singing" }];
     cb(hobby);
+    // setTimeout(function () {
+    //     console.log(users.name);
+    // }, 5000);
     console.log(users.name);
+
 }
 
 setTimeout(function () {
@@ -44,7 +48,7 @@ setTimeout(function () {
             getHobby(users[1], function (hobby) {
                 console.log(hobby[1]);
             })
-        }, 4000);
+        }, 2000);
 
     });
 }, 6000);
@@ -55,6 +59,9 @@ new Promise((resolve, reject) => {
         resolve("Hello from Promise");
     }, 8000);
 }).then(result => console.log(result));
+
+// The microtask queue(Promise) is processed before the macrotask queue(setTimeout), even if they are scheduled to execute after similar delays. 
+
 
 
 
